@@ -51,11 +51,7 @@
         return user[0].username;
       }
     },
-    created() {
-      this.$store.dispatch("logIn");
-    },
     mounted() {
-      this.$store.dispatch("fetchAllPosts");
       window.scrollTo(0, 0);
     }
   };

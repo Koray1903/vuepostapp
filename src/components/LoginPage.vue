@@ -31,6 +31,8 @@
 
         if (store.state.isLoggedIn === true) {
           this.successMessage = "You have successfully logged in";
+          this.$store.dispatch("logIn");
+          this.$store.dispatch("fetchAllPosts");
           setTimeout(() => this.$router.push({path: "/home"}), 1000);
         } else {
           this.errorMessage = "Invalid email address";
