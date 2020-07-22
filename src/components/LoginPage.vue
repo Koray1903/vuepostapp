@@ -46,9 +46,6 @@
     },
     mounted() {
       this.$refs.inputRef.focus();
-    },
-    destroy() {
-      this.$store.dispatch("logIn");
     }
   };
 </script>

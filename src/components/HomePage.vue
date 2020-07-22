@@ -53,9 +53,9 @@
     },
     created() {
       this.$store.dispatch("logIn");
-      this.$store.dispatch("fetchAllPosts");
     },
     mounted() {
+      this.$store.dispatch("fetchAllPosts");
       window.scrollTo(0, 0);
     }
   };
