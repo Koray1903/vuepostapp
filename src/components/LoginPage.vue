@@ -69,6 +69,10 @@
     animation: slide-in-blurred-left 1s ease-in-out both;
     }
 
+  form :focus {
+    outline: none !important;
+    }
+
   @keyframes slide-in-blurred-left {
     0% {
       transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
