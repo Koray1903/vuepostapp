@@ -35,7 +35,6 @@
     data() {
       return {
         id: this.$route.params.id,
-        comments: store.state.comments,
         isLoggedIn: store.state.isLoggedIn
       };
     },
@@ -45,7 +44,10 @@
       },
       user() {
         return this.$store.getters.getUserById(this.post.userId);
-      }
+      },
+      comments() {
+        return this.$store.getters.getCommentsPerPost;
+      },
     },
     created() {
       this.$store.dispatch("fetchComments", this.id);

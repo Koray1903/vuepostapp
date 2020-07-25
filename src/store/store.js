@@ -74,7 +74,10 @@ export const store = new Vuex.Store({
     },
     getUserById: state => id => {
       return state.userList.find(user => user.id == id);
-    }
+    },
+    getCommentsPerPost: state => {
+      return state.comments;
+    },
   }
 });
 
